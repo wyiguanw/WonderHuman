@@ -71,18 +71,20 @@ python gen_pose_map_cano_smpl.py
 ### Training for Stage 1
 
 ```
-cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage1 --train_stage 1 --pose_op_start_iter 10
+cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage1 --src_type --train_stage 1 --pose_op_start_iter 10
 ```
-
+```
+** --src_type indicates the data source, use:
+	wild--- all customized or in-the-wild dataset
+	zju_mocap--- zju_377, zju_386, zju_392
+	zju_mocap_1--- zju_393, zju_394, zju_387
+	monocap--- all Monocap datasets
+```
 ### Training for Stage 2
 
 - export predicted smpl:
 ```
 cd scripts & python export_stage_1_smpl.py
-```
-- visualize the optimized smpl (optional):
-```
-python render_pred_smpl.py
 ```
 - generate the predicted position map:
 ```
@@ -90,7 +92,7 @@ python gen_pose_map_our_smpl.py
 ```
 - start to train
 ```
-cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage2 --train_stage 2 --stage1_out_path $path_to_stage1_net_save_path
+cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage2 --src_type  --train_stage 2 --stage1_out_path $path_to_stage1_net_save_path
 ```
 
 
