@@ -5,7 +5,7 @@
 This is an official implementation. The codebase is implemented using [PyTorch](https://pytorch.org/) and tested on [Ubuntu](https://ubuntu.com/) 20.04.6 LTS.
 ## Todo
 
-- [ ] Release the reorganized code and data.
+- [ ] Release the reorganized code.
 - [ ] Provide the scripts for data preprocessing.
 - [ ] Provide the code for free-view rendering and annimation.
 ## Prerequisite
