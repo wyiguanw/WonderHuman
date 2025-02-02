@@ -6,7 +6,7 @@ This is an official implementation. The codebase is implemented using [PyTorch](
 ## Todo
 
 - [ ] Release the reorganized code.
-- [ ] Provide the scripts for data preprocessing.
+- [ ] Provide the full scripts for data preprocessing.
 - [ ] Provide the code for free-view rendering and annimation.
 ## Prerequisite
 
