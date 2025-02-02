@@ -32,7 +32,7 @@ Install the required packages.
 
     pip install -r requirements.txt
 
-### `Download SMPL model`
+### Download required models
 
 - SMPL/SMPL-X model: register and download [SMPL](https://smpl.is.tue.mpg.de/) and [SMPL-X](https://smpl-x.is.tue.mpg.de/), and put these files in ```assets/smpl_files```. The folder should have the following structure:
 ```
@@ -46,7 +46,7 @@ smpl_files
    ├── SMPLX_MALE.npz
    └── SMPLX_NEUTRAL.npz
 ```
-To be continue ...
+`TO DO: provide a download link for the required data.`
 
 ## Run on Your Own Video
 
