@@ -71,7 +71,7 @@ python gen_pose_map_cano_smpl.py
 ### Training for Stage 1
 
 ```
-cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage1 --src_type --train_stage 1 --pose_op_start_iter 10
+cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage1 --src_type {src_type} --train_stage 1 --pose_op_start_iter 10
 ```
 ```
 ** --src_type indicates the data source, use:
@@ -92,7 +92,7 @@ python gen_pose_map_our_smpl.py
 ```
 - start to train
 ```
-cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage2 --src_type  --train_stage 2 --stage1_out_path $path_to_stage1_net_save_path
+cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage2 --src_type {src_type}  --train_stage 2 --stage1_out_path $path_to_stage1_net_save_path
 ```
 
 
