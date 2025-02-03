@@ -7,7 +7,7 @@ This is an official implementation. The codebase is implemented using [PyTorch](
 
 - [ ] Release the reorganized code.
 - [ ] Provide the full scripts for data preprocessing.
-- [ ] Provide the code for free-view rendering and annimation.
+- [ ] Provide the code for free-view rendering and animation.
 ## Prerequisite
 
 ### `Configure environment`
@@ -48,52 +48,6 @@ smpl_files
 ```
 `TO DO: provide a download link for the required data.`
 
-## Run on Your Own Video
-
-### Preprocessing
-
-- masks and poses: use the bash script `scripts/custom/process-sequence.sh` in [InstantAvatar](https://github.com/tijiang13/InstantAvatar). The data folder should have the followings:
-```
-smpl_files
- ├── images
- ├── masks
- ├── cameras.npz
- └── poses_optimized.npz
-```
-- data format: we provide a script to convert the pose format of romp to ours (remember to change the `path` in L50 and L51):
-```
-cd scripts & python sample_romp2gsavatar.py
-```
-- position map of the canonical pose: (remember to change the corresponding `path`)
-```
-python gen_pose_map_cano_smpl.py
-```
-### Training for Stage 1
-
-```
-cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage1 --src_type {src_type} --train_stage 1 --pose_op_start_iter 10
-```
-```
-** --src_type indicates the data source, use:
-	wild--- all customized or in-the-wild dataset
-	zju_mocap--- zju_377, zju_386, zju_392
-	zju_mocap_1--- zju_393, zju_394, zju_387
-	monocap--- all Monocap datasets
-```
-### Training for Stage 2
-
-- export predicted smpl:
-```
-cd scripts & python export_stage_1_smpl.py
-```
-- generate the predicted position map:
-```
-python gen_pose_map_our_smpl.py
-```
-- start to train
-```
-cd .. &  python train.py -s $path_to_data/$subject -m output/{$subject}_stage2 --src_type {src_type}  --train_stage 2 --stage1_out_path $path_to_stage1_net_save_path
-```
 
 
 ## Acknowledgement
