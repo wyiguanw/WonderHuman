@@ -59,5 +59,13 @@ The implementation took reference from [GaussianAvatar](https://github.com/aipix
 If you find our work useful, please consider citing:
 
 ```BibTeX
-
+@misc{wang2025wonderhuman,
+      title={WonderHuman: Hallucinating Unseen Parts in Dynamic 3D Human Reconstruction}, 
+      author={Zilong Wang and Zhiyang Dou and Yuan Liu and Cheng Lin and Xiao Dong and Yunhui Guo and Chenxu Zhang and Xin Li and Wenping Wang and Xiaohu Guo},
+      year={2025},
+      eprint={2502.01045},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2502.01045}, 
+      }
 ```
