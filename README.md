@@ -1,4 +1,4 @@
-# WonderHuman: Hallucinating Unseen Parts in Dynamic 3D Human Reconstruction
+# WonderHuman: Hallucinating Unseen Parts in Dynamic 3D Human Reconstruction (Accepted by TVCG)
 
 [Project Page](https://wyiguanw.github.io/WonderHuman/) | [Paper]() | [Video](https://youtu.be/bdwUL_RKajA)
 
