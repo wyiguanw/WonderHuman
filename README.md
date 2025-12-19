@@ -10,7 +10,7 @@ This is an official implementation. The codebase is implemented using [PyTorch](
 - [ ] Provide the code for free-view rendering and animation.
 ## Prerequisite
 
-### `Configure environment`
+### Configure environment
 
 Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (recommended) or [Anaconda](https://www.anaconda.com/).
 
@@ -48,6 +48,25 @@ smpl_files
 ```
 `TO DO: provide a download link for the required data.`
 
+
+## Run your own data (In the wild data)
+
+### Data preprocessing
+
+Follow the instruction data_processing.md for details
+
+### Stage I training 
+```
+python train.py -s ./data/{subject} -m output_{subject}/{subject}_stage1 --src_type wild --epoch 200 --train_stage 1 --pose_op_start_iter 10
+```
+### Stage II data preparation
+
+Follow the instruction data_processing.md for details
+
+### Stage II training 
+```
+python train.py -s ./data/{subject} -m output_{subject}/{subject}_finetuned --src_type wild --train_stage 2 --stage1_out_path output_{subject}/{subject}_stage1/net/iteration_200
+```
 
 
 ## Acknowledgement
